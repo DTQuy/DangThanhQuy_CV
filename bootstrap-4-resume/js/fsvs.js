@@ -294,9 +294,9 @@
 			var delta = Math.max( -1, Math.min( 1, wheely ) );
 			if( isChrome() ) {
 				// chrome seems to extends its "wheely" motion
-				wheely = Math.floor( wheely / 5 );
+				wheely = Math.floor( wheely / 7 );
 			}
-			if( ( ! scrolling || ( options.mouseWheelDelay && Date.now() > mouseWheelScrollStart + options.mouseWheelDelay ) ) && Math.abs( wheely ) > 5 ) {
+			if( ( ! scrolling || ( options.mouseWheelDelay && Date.now() > mouseWheelScrollStart + options.mouseWheelDelay ) ) && Math.abs( wheely ) > 7 ) {
 				mouseWheelScrollStart = Date.now();
 				scrolling = true;
 				var allowToRun = true;
@@ -332,7 +332,7 @@
 			var e = window.event || ev;
 			var wheely = ( e.wheelDelta || e.detail || e.originalEvent.detail );
 			var delta = Math.max( -1, Math.min( 1, wheely ) );
-			if( isChrome() ) wheely = Math.floor( wheely / 5 );
+			if( isChrome() ) wheely = Math.floor( wheely / 7 );
 			if( e.originalEvent && e.originalEvent.detail ) {
 				if( delta > 0 ) {
 					return false;
