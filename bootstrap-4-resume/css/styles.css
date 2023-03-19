@@ -504,3 +504,10 @@ label {
 		margin-left: -5%;
 	}
 }
+.skills {
+	display: flex;
+}
+.img-skills{
+	width: 30%;
+	height: 60%;
+}
